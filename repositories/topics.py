@@ -1,4 +1,3 @@
-import bs4.element
 import requests
 from bs4 import BeautifulSoup
 import logging
@@ -11,7 +10,7 @@ class TopicsRepository:
 
     def __init__(self):
         self.response = requests.get(self.urlOfTopics)
-        print('topics Initialized')
+        print('topics Initialized ')
         if self.response.status_code == 200:
             topics = self.getTopicsBySoup()
             self.fillTopicsInfo(topics)
